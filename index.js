@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser());
 	
-app.post('/webhooks/orders/create',async(req, res) => {
+app.post('/webhooks/orders/create',function(req, res){
   
   const order=req.body;
   
