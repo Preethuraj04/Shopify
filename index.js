@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const getRawBody = require('raw-body')
 var mongo = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/shopifyDB";
+//var url = "mongodb://localhost:27017/shopifyDB";
+var url = "mongodb+srv://shoper:cart@cluster0-gekc4.mongodb.net/test?retryWrites=true&w=majority";
+//mongodb+srv://shoper:cart@cluster0-gekc4.mongodb.net/test?retryWrites=true&w=majority
 app.set("view engine", "ejs");
 
 var ObjectId = require('mongodb').ObjectID;
@@ -97,4 +99,4 @@ res.redirect("/");
 });
 
 
-app.listen(process.env.PORT, () => console.log(Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
