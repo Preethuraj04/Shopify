@@ -4,7 +4,7 @@ const getRawBody = require('raw-body')
 var mongo = require('mongodb').MongoClient;
 //var url = "mongodb://localhost:27017/shopifyDB";
 var url = "mongodb+srv://shoper:cart@cluster0-gekc4.mongodb.net/test?retryWrites=true&w=majority";
-//mongodb+srv://shoper:cart@cluster0-gekc4.mongodb.net/test?retryWrites=true&w=majority
+
 app.set("view engine", "ejs");
 
 var ObjectId = require('mongodb').ObjectID;
@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser());
 	
-app.post('/webhooks/orders/create',function(req, res){
+app.post('/orders/create',function(req, res){
   
   const order=req.body;
   
